@@ -1,0 +1,25 @@
+
+.site-navbar {
+  .navbar-header {
+    background-color: @site-navbar-header-bg;
+    color: @site-navbar-header-color;
+
+    .navbar-toggle {
+      color: @site-navbar-header-color;
+    }
+
+    .hamburger {
+      &:before,
+      &:after,
+      .hamburger-bar {
+        background-color: @site-navbar-header-color;
+      }
+    }
+
+    .navbar-brand {
+      color: @site-navbar-brand-color;
+      font-family: @brand-font-family;
+      cursor: pointer;
+    }
+  }
+}

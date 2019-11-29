@@ -1,0 +1,8 @@
+<IfModule mod_headers.c>
+    Options FollowSymLinks
+
+    RewriteEngine on
+    Allow from all
+    RewriteCond $1 !^(index\.php|assets|editor|finder|templates|captcha|fonts)
+    RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>

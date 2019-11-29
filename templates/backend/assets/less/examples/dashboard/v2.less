@@ -1,0 +1,126 @@
+@import "vars.less";
+
+.dashboard {
+  .widget, .panel {
+      height: ~"calc(100% - 30px)";
+    }
+  .widget-content {
+    height: 100%;
+  }
+}
+
+#widgetLinearea {
+  .ct-chart {
+    .ct-label {
+      &.ct-vertical, &.ct-horizontal {
+        font-size: 14px;
+      }
+    }
+    .ct-area {
+      fill-opacity: 1;
+    }
+    .ct-series {
+      &.ct-series-a {
+        .ct-area {
+          fill: @color-blue-200;
+        }
+      }
+      &.ct-series-b {
+        .ct-area {
+          fill: @color-teal-200;
+        }
+      }
+    }
+  }
+
+  ul {
+    .icon {
+      vertical-align: text-bottom;
+    }
+  }
+}
+
+#widgetPieProgress {
+  .pie_progress {
+    text-align: center;
+    position: relative;
+  }
+  .counter {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+#widgetBar {
+  .ct-chart {
+    .ct-label {
+      &.ct-vertical, &.ct-horizontal {
+        font-size: 14px;
+      }
+      &.ct-horizontal {
+        text-align: center;
+      }
+    }
+    .ct-bar {
+      stroke-width: 4%;
+    }
+    .ct-series {
+      &.ct-series-a {
+        .ct-bar {
+          stroke: @color-blue-600;
+        }
+      }
+      &.ct-series-b {
+        .ct-bar {
+          stroke: @gray-lightest;
+        }
+      }
+    }
+
+  }
+}
+
+#widgetUserList {
+  .list-group-item {
+    + .list-group-item {
+      border-top: 1px solid @gray-lighter;
+    }
+    .media-left {
+      position: relative;
+    }
+    .status {
+      position: absolute;
+      bottom: 5px;
+      border: 1px solid white;
+      left: 30px;
+    }
+  }
+}
+
+#widgetSales {
+  table {
+    tr {
+      th, td {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      > td:first-child {
+        color: @gray-darkest;
+      }
+      > th:last-child, > td:last-child {
+        text-align: right;
+      }
+    }
+  }
+}
+
+#widgetGmap {
+  overflow: hidden;
+
+  .map {
+    border: none;
+    padding: 0;
+    height: 350px;
+  }
+}

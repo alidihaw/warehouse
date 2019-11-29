@@ -1,0 +1,71 @@
+@import "vars.less";
+
+.page-login {
+  color: @color-white;
+
+  &:before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: url("../../example-images/login.jpg");
+    background-position-y:top;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  &:after {
+    position: fixed;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: fade(@gray-base, 85%);
+    z-index: -1;
+  }
+
+  .brand {
+    margin-bottom: 28px;
+
+    &-text {
+      color: @color-white;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+  }
+
+  form {
+    width: 340px;
+    margin: 30px 0;
+
+    a {
+      margin-left: 20px;
+      color: rgba(255,255,255, .5);
+    }
+  }
+
+  .page-copyright {
+    color: @color-white;
+
+    .social {
+      .icon {
+        &,
+        &:hover,
+        &:active {
+          color: @color-white;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: @screen-xs) {
+  .page-login {
+    form {
+      width: auto;
+    }
+  }
+}

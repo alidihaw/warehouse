@@ -1,0 +1,57 @@
+@import "vars.less";
+
+.page-locked {
+  position: relative;
+  color: @color-white;
+
+  &:before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: url("../../example-images/lockscreen.jpg");
+    background-position-y:top;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  &:after {
+    position: fixed;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: fade(@gray-base, 85%);
+    z-index: -1;
+  }
+
+  .avatar {
+    margin-bottom: 15px;
+  }
+
+  .locked-user {
+    margin-bottom: 35px;
+  }
+
+  form {
+    width: 310px;
+    margin: 0 auto 35px;
+  }
+
+  .page-copyright {
+    color: @color-white;
+
+    .social {
+      .icon {
+        &,
+        &:hover,
+        &:active {
+          color: @color-white;
+        }
+      }
+    }
+  }
+}
